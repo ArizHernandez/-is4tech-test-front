@@ -1,0 +1,83 @@
+<main class="flex row h-screen">
+  <section
+    class="relative hidden md:block md:1/3 lg:w-3/4 md:h-full md:before:content-[''] md:before:w-full md:before:h-full md:before:absolute md:before:bg-zinc-700/25"
+  >
+    <img
+      class="w-full h-full object-fit"
+      src="assets/images/login.jpg"
+      alt="login"
+    />
+  </section>
+
+  <section
+    class="w-full h-full md:w-2/3 lg:w-1/4 bg-white p-4 flex justify-center flex-col dark:bg-slate-900"
+  >
+    <h2 class="text-center mb-0">{{ "WELCOME-BACK" | transloco }}!</h2>
+    <p class="text-center">
+      {{ "auth.LOGIN" | transloco }}
+    </p>
+
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+      <mat-form-field class="w-full" appearance="fill">
+        <mat-label>{{ "auth.USER" | transloco }}</mat-label>
+        <input
+          formControlName="user"
+          matInput
+          type="text"
+          [placeholder]="'EXAMPLE' | transloco"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="w-full" appearance="fill">
+        <mat-label>{{ "auth.PASSWORD" | transloco }}</mat-label>
+        <input
+          formControlName="password"
+          matInput
+          [type]="hidePassword ? 'password' : 'text'"
+        />
+
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="hidePassword = !hidePassword"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hidePassword"
+        >
+          <mat-icon>
+            {{ hidePassword ? "visibility_off" : "visibility" }}
+          </mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-checkbox class="-mt-14" color="primary">
+        <span>{{ "auth.REMEMBER-ME" | transloco }}</span>
+      </mat-checkbox>
+
+      <div class="mx-auto mt-6 text-center">
+        <button mat-flat-button color="primary" class="px-8">
+          {{ "auth.LOGIN" | transloco }}!
+        </button>
+
+        <p class="text-center mt-2.5">
+          {{ "auth.FORGOT-PASSWORD" | transloco | titlecase }}
+          <a href="#" class="text-cyan-600 dark:text-cyan-500">{{
+            "auth.RECOVER-PASSWORD" | transloco
+          }}</a>
+          {{ "OR" | transloco }}
+          <a
+            routerLink="/auth/sign-up"
+            class="text-cyan-600 dark:text-cyan-500"
+          >
+            {{ "auth.CREATE-ACCOUNT" | transloco | titlecase }}
+          </a>
+        </p>
+      </div>
+    </form>
+
+    <div class="flex justify-center mt-4">
+      <app-theme-button class="mr-2"></app-theme-button>
+      <app-translation-button></app-translation-button>
+    </div>
+  </section>
+</main>

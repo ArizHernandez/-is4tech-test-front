@@ -1,0 +1,8 @@
+<button
+  (click)="toggleTheme(themeActive === 'light' ? 'dark' : 'light')"
+  class="transition-transform hover:scale-90"
+  mat-button
+>
+  <mat-icon class="text-stone-500" *ngIf="themeActive === 'light'">dark_mode</mat-icon>
+  <mat-icon class="text-yellow-400" *ngIf="themeActive === 'dark'">light_mode</mat-icon>
+</button>

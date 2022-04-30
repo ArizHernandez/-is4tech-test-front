@@ -1,0 +1,22 @@
+{
+  "WELCOME": "Bienvenido 🎉",
+  "WELCOME-BACK": "Bienvenido de nuevo 👋",
+  "OR": "o",
+  "CREATED-SUCCESS": "Creado exitosamente 🎉",
+  "NOT-FOUND": "No se ha encontrado o no existe 🤔",
+  "EXAMPLE": "Ejemplo",
+  "USER-CREATED": "Usuario creado exitosamente 🎉",
+  "auth": {
+    "LOGIN": "Iniciar sesión",
+    "SIGNUP": "Registrarse",
+    "USER": "Usuario",
+    "PASSWORD": "Contraseña",
+    "CONFIRM-PASSWORD": "Confirmar contraseña",
+    "FORGOT-PASSWORD": "¿Olvidaste tu contraseña?",
+    "RECOVER-PASSWORD": "Recuperar contraseña",
+    "REMEMBER-ME": "Recordarme",
+    "LOGOUT": "Cerrar sesión",
+    "CREATE-ACCOUNT": "Crear cuenta",
+    "BOTH-PASSWORDS-MUST-MATCH": "Ambas contraseñas deben coincidir"
+  }
+}

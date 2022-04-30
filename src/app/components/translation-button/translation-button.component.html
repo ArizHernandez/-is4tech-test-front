@@ -1,0 +1,23 @@
+<button mat-button [matMenuTriggerFor]="menu" class="dark:text-slate-200">
+  <mat-icon>translate</mat-icon> <mat-icon>expand_more</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+  <button
+    class="dark:text-slate-200"
+    (click)="toggleTranslation('es')"
+    mat-menu-item
+  >
+    <span>Español </span>
+    <span class="flag-icon flag-icon-gt"></span>
+  </button>
+
+  <button
+    class="dark:text-slate-200"
+    (click)="toggleTranslation('en')"
+    mat-menu-item
+  >
+    <span>English </span>
+    <span class="flag-icon flag-icon-us"></span>
+  </button>
+</mat-menu>
