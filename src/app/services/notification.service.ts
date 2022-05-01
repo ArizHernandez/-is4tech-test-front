@@ -16,10 +16,7 @@ interface NotificationProps {
   providedIn: 'root',
 })
 export class NotificationService {
-  constructor(
-    private snackBar: MatSnackBar,
-    private translocoService: TranslocoService
-  ) {}
+  constructor(private snackBar: MatSnackBar, private translocoService: TranslocoService) {}
 
   notificate({
     message = '',
@@ -31,7 +28,7 @@ export class NotificationService {
     },
   }: NotificationProps) {
     this.snackBar.open(this.translocoService.translate(message), action, {
-      duration: duration,
+      duration,
       horizontalPosition: position.horizontal,
       verticalPosition: position.vertical,
       panelClass: ['bg-cyan-700', 'text-white', 'dark:bg-cyan-600'],

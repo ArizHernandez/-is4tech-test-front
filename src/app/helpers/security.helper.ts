@@ -6,8 +6,6 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class SecurityService {
-  constructor() {}
-
   encrypt(value: string | CryptoJS.lib.WordArray) {
     const encryptValue = AES.encrypt(value, environment.secretKey);
 

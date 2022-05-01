@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { StorageService } from '../utilities/storage';
 import { Theme } from 'src/app/interfaces/theme';
+import { StorageService } from '../utilities/storage';
 
 @Injectable({
   providedIn: 'root',

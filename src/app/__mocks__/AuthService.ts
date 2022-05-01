@@ -1,4 +1,4 @@
-import { Theme } from '../interfaces/theme';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { AuthBody } from '../interfaces/auth';
 
 export class AuthServiceMock {

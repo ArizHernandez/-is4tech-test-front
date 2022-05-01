@@ -4,5 +4,5 @@ export const routes: RoutesNav[] = [
   {
     path: '',
     keyword: 'HOME',
-  }
-]
+  },
+];

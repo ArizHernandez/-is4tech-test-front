@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ThemeService } from './services/theme.service';
 import { StorageService } from './utilities/storage';
 
 @Component({
@@ -13,8 +12,7 @@ export class AppComponent {
   constructor(private storage: StorageService) {
     if (
       storage.getTheme() === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       this.storage.setTheme('dark');
       document.documentElement.classList.add('dark');

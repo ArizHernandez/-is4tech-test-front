@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import { Injectable, NgModule } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ValidatorsService } from '../../../services/validators.service';
 import { AuthService } from '../../../services/auth.service';
 
@@ -10,6 +10,7 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class SignUpComponent {
   hidePassword = true;
+
   hideConfirmPassword = true;
 
   myForm = this.fb.group(
@@ -19,12 +20,7 @@ export class SignUpComponent {
       confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
     },
     {
-      validators: [
-        this.validatorsService.bothControlsEquals(
-          'password',
-          'confirmPassword'
-        ),
-      ],
+      validators: [this.validatorsService.bothControlsEquals('password', 'confirmPassword')],
     }
   );
 

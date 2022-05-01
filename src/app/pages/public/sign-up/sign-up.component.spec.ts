@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SignUpComponent } from './sign-up.component';
 import { TranslocoModule } from '@ngneat/transloco';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import { TranslationButtonModule } from '../../../components/translation-button/translation-button.module';
-import { ThemeButtonModule } from '../../../components/theme-button/theme-button.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { By } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslationButtonModule } from '../../../components/translation-button/translation-button.module';
+import { ThemeButtonModule } from '../../../components/theme-button/theme-button.module';
 import { ValidatorsService } from '../../../services/validators.service';
 import { AuthService } from '../../../services/auth.service';
 import { AuthServiceMock } from '../../../__mocks__/AuthService';
-import { By } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignUpComponent } from './sign-up.component';
 
 describe('SignUpComponent', () => {
   let component: SignUpComponent;

@@ -5,8 +5,6 @@ import { AbstractControl, ValidationErrors } from '@angular/forms';
   providedIn: 'root',
 })
 export class ValidatorsService {
-  constructor() {}
-
   bothControlsEquals(firstControl: string, secondControl: string) {
     return (formGroup: AbstractControl): ValidationErrors | null => {
       const firstValue = formGroup.get(firstControl)?.value;

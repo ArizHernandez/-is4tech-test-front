@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { StorageService } from '../../utilities/storage';
-import { ThemeService } from '../../services/theme.service';
 import { Theme } from 'src/app/interfaces/theme';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-theme-button',

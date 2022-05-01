@@ -8,6 +8,4 @@ import { routes } from '../../utilities/routes';
 })
 export class AsideComponent {
   routesNav = routes;
-
-  constructor() {}
 }

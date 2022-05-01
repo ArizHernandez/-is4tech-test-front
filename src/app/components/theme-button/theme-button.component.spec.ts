@@ -1,10 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThemeButtonComponent } from './theme-button.component';
-import { ThemeService } from '../../services/theme.service';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { Theme } from 'src/app/interfaces/theme';
+import { ThemeService } from '../../services/theme.service';
+import { ThemeButtonComponent } from './theme-button.component';
 import { ThemeServiceMock } from '../../__mocks__/ThemeService';
 
 describe('TranslationButtonComponent', () => {
