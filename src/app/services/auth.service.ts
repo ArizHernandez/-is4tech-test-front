@@ -51,4 +51,17 @@ export class AuthService {
         },
       });
   }
+
+  fakeLogin() {
+    this.storage.setToken('test');
+    this.router.navigateByUrl('/home');
+
+    this.notificationService.notificate({ message: 'WELCOME-BACK' });
+  }
+
+  fakeSignUp() {
+    this.router.navigateByUrl('/auth/login');
+
+    this.notificationService.notificate({ message: 'USER-CREATED' });
+  }
 }

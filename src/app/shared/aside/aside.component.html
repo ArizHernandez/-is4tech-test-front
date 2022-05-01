@@ -1,0 +1,20 @@
+<mat-drawer-container class="fixed top-0 left-0 h-screen" autosize>
+  <mat-drawer #drawer class="p-5" mode="side">
+    <div class="flex justify-end">
+      <button (click)="drawer.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <ul>
+      <li *ngFor="let route of routesNav">
+        <a [routerLink]="route.path" routerLinkActive="text-teal-600">
+          <span>{{ "routes." + route.keyword | transloco }}</span>
+        </a>
+      </li>
+    </ul>
+  </mat-drawer>
+</mat-drawer-container>
+
+<button mat-icon-button (click)="drawer.toggle()" class="flex content-center">
+  <mat-icon>menu</mat-icon>
+</button>

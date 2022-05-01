@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StorageHelper } from '../helpers/storage.helper';
+import { Theme } from '../interfaces/theme';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +10,7 @@ export class StorageService {
 
   tokenKey = 'AC_D';
 
-  setTheme(theme: 'light' | 'dark') {
+  setTheme(theme: Theme) {
     this.storage.set(theme, 'theme');
   }
 
@@ -23,5 +24,9 @@ export class StorageService {
 
   getToken() {
     return this.storage.get(this.tokenKey);
+  }
+
+  removeToken() {
+    this.storage.remove(this.tokenKey);
   }
 }

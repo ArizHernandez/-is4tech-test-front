@@ -6,6 +6,7 @@
   "NOT-FOUND": "Not found or not exist 🤔",
   "EXAMPLE": "Example",
   "USER-CREATED": "User created successfully 🎉",
+  "NOT-USER-VALID": "User not valid 🚫",
   "auth": {
     "LOGIN": "Login",
     "SIGNUP": "Signup",
@@ -18,5 +19,8 @@
     "LOGOUT": "Logout",
     "CREATE-ACCOUNT": "Create account",
     "BOTH-PASSWORDS-MUST-MATCH": "Both passwords must match"
+  },
+  "routes": {
+    "HOME": "Home"
   }
 }

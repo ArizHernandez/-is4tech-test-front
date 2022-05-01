@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { StorageService } from '../../utilities/storage';
 import { ThemeService } from '../../services/theme.service';
+import { Theme } from 'src/app/interfaces/theme';
 
 @Component({
   selector: 'app-theme-button',
@@ -12,10 +13,9 @@ export class ThemeButtonComponent {
 
   constructor(private themeService: ThemeService) {
     this.themeActive = themeService.themeActive;
-
   }
 
-  toggleTheme(theme: 'light' | 'dark') {
+  toggleTheme(theme: Theme) {
     this.themeService.toggleTheme(theme);
 
     this.themeActive = theme;

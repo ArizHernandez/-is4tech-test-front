@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StorageService } from '../utilities/storage';
+import { Theme } from 'src/app/interfaces/theme';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class ThemeService {
     this.themeActive = this.storage.getTheme()!;
   }
 
-  toggleTheme(theme: 'light' | 'dark') {
+  toggleTheme(theme: Theme) {
     this.storage.setTheme(theme);
 
     if (theme === 'dark') {
