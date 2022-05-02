@@ -9,7 +9,7 @@
   "NOT-USER-VALID": "Usuario no valido 🚫",
   "NAME": "Nombre",
   "CODE": "Código",
-  "DELETED-SUCCESS": "Borrado exitosamente!!",
+  "DELETE-SUCCESS": "Borrado exitosamente!!",
   "PUT-SUCCESS": "Editado exitosamente!!",
   "form": {
     "ADD-NEW": "Crear un nuevo registro",
