@@ -14,19 +14,20 @@ import { NotificationService } from './notification.service';
   providedIn: 'root',
 })
 export class DistributorsService {
-  private baseUrl = `${environment.apiUrl}`;
+  private baseUrl = `${environment.apiUrl}/distributors`;
 
   private _distributors: Distributor[] = [];
 
   constructor(private http: HttpClient, private notificationService: NotificationService) {}
 
   getDistributors() {
-    this.http.get<DistributorsResponse>(`${this.baseUrl}/distributors`).subscribe({
+    this.http.get<DistributorsResponse>(`${this.baseUrl}`).subscribe({
       next: resp => {
         this._distributors = resp.data;
       },
       error: err => {
-        this.notificationService.notificate({ message: err.error.message });
+        const error = err.error.message ? err.error.message : err.message;
+        this.notificationService.notificate({ message: error });
       },
     });
   }
@@ -34,15 +35,15 @@ export class DistributorsService {
   postDistributor(body: DistributorBody) {
     let error = null;
 
-    this.http.post<DistributorResponse>(`${this.baseUrl}/distributors`, body).subscribe({
+    this.http.post<DistributorResponse>(`${this.baseUrl}`, body).subscribe({
       next: resp => {
         this._distributors.unshift(resp.data);
 
         this.notificationService.notificate({ message: resp.message });
       },
       error: err => {
-        error = err;
-        this.notificationService.notificate({ message: err.error.message });
+        error = err.error.message ? err.error.message : err.message;
+        this.notificationService.notificate({ message: error });
       },
     });
 
@@ -52,7 +53,7 @@ export class DistributorsService {
   putDistributor(body: DistributorBody, id: number) {
     let error = null;
 
-    this.http.put<DistributorResponse>(`${this.baseUrl}/distributors/${id}`, body).subscribe({
+    this.http.put<DistributorResponse>(`${this.baseUrl}/${id}`, body).subscribe({
       next: resp => {
         const editedDistributor = this._distributors.findIndex(
           distributor => distributor.id === resp.data.id
@@ -63,8 +64,8 @@ export class DistributorsService {
         this.notificationService.notificate({ message: resp.message });
       },
       error: err => {
-        error = err;
-        this.notificationService.notificate({ message: err.error.message });
+        error = err.error.message ? err.error.message : err.message;
+        this.notificationService.notificate({ message: error });
       },
     });
 
@@ -74,7 +75,7 @@ export class DistributorsService {
   deleteDistributor(id: number) {
     let error = null;
 
-    this.http.delete<DistributorResponse>(`${this.baseUrl}/distributors/${id}`).subscribe({
+    this.http.delete<DistributorResponse>(`${this.baseUrl}/${id}`).subscribe({
       next: resp => {
         this._distributors = this._distributors.filter(
           distributor => distributor.id !== resp.data.id
@@ -83,8 +84,8 @@ export class DistributorsService {
         this.notificationService.notificate({ message: resp.message });
       },
       error: err => {
-        error = err;
-        this.notificationService.notificate({ message: err.error.message });
+        error = err.error.message ? err.error.message : err.message;
+        this.notificationService.notificate({ message: error });
       },
     });
 

@@ -34,12 +34,26 @@
   },
   "routes": {
     "HOME": "Home",
-    "DISTRIBUTORS": "Distributors"
+    "DISTRIBUTORS": "Distributors",
+    "PRODUCTS": "Products",
+    "AUTHORIZATEDCHANNELS": "Authorized channels"
   },
   "distributors": {
     "TITLE": "Distributors",
     "SINGLE-TITLE": "Distributor",
     "EMAIL-NOTIFICATE": "Email to notify",
     "EMAIL-ALERT": "Email to alert"
+  },
+  "products": {
+    "TITLE": "Products",
+    "SINGLE-TITLE": "Product",
+    "AMOUNT": "Amount",
+    "DISTRIBUTOR": "Distributor",
+    "DESCRIPTION": "Description"
+  },
+  "authorizated-channels": {
+    "TITLE": "Authorizated channels",
+    "SINGLE-TITLE": "Authorizated channel",
+    "DISTRIBUTOR": "Distributor"
   }
 }

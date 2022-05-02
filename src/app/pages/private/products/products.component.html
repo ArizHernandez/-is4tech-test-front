@@ -1,0 +1,41 @@
+<section class="mt-2">
+  <h2 class="text-center text-2xl">{{ 'products.TITLE' | transloco }}</h2>
+
+  <article class="grid gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
+    <app-new-record-card (add)="openModal()"></app-new-record-card>
+    <app-card
+      *ngFor="let product of products"
+      [title]="product.code"
+      [subtitle]="(product.amount | currency: 'GTQ':'symbol-narrow':'0.02')!.toString()"
+      [translateSubtitle]="false">
+      <content>
+        <p class="mb-0.5">{{ 'distributors.SINGLE-TITLE' | transloco }}:</p>
+        <p class="pl-1.5 text-emerald-300">{{ product.distributor.name }}</p>
+        <p class="mb-0.5">{{ 'products.DESCRIPTION' | transloco }}:</p>
+        <p class="mb-3 pl-1.5 text-emerald-300">{{ product.description }}</p>
+      </content>
+      <section actions class="flex justify-between">
+        <button
+          (click)="openModal(product)"
+          mat-flat-button
+          color="primary"
+          class="flex flex-row mt-1">
+          <span class="mb-0">
+            {{ 'form.EDIT' | transloco }}
+          </span>
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          (click)="delete(product.id)"
+          mat-flat-button
+          color="warn"
+          class="flex flex-row mt-1">
+          <span class="mb-0">
+            {{ 'form.DELETE' | transloco }}
+          </span>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </section>
+    </app-card>
+  </article>
+</section>

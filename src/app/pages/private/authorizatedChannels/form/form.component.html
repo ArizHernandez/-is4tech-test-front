@@ -1,0 +1,32 @@
+<h2>
+  {{ (data ? 'form.EDIT' : 'form.CREATE') | transloco }}
+  {{ 'authorizated-channels.SINGLE-TITLE' | transloco }}
+</h2>
+
+<form [formGroup]="myForm">
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>{{ 'authorizated-channels.DISTRIBUTOR' | transloco }}</mat-label>
+    <mat-select formControlName="distributor_id">
+      <mat-option *ngFor="let distributor of distributors" [value]="distributor.id">
+        {{ distributor.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>{{ 'CODE' | transloco }}</mat-label>
+    <input matInput formControlName="code" type="text" placeholder="ch-1" />
+  </mat-form-field>
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>{{ 'NAME' | transloco }}</mat-label>
+    <input matInput formControlName="name" type="text" placeholder="Channel 1" />
+  </mat-form-field>
+
+  <button mat-flat-button (click)="onSubmit()" class="mr-2" color="primary" type="submit">
+    {{ 'form.SAVE' | transloco }}
+  </button>
+  <button mat-flat-button (click)="onCancel()" color="warn" type="submit">
+    {{ 'form.CANCEL' | transloco }}
+  </button>
+</form>

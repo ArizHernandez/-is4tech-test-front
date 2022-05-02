@@ -1,0 +1,39 @@
+<section class="mt-2">
+  <h2 class="text-center text-2xl">{{ 'authorizated-channels.TITLE' | transloco }}</h2>
+
+  <article class="grid gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
+    <app-new-record-card (add)="openModal()"></app-new-record-card>
+    <app-card
+      *ngFor="let authorizatedChannel of authorizatedChannels"
+      [title]="authorizatedChannel.code"
+      [subtitle]="authorizatedChannel.name"
+      [translateSubtitle]="false">
+      <content>
+        <p class="mb-0.5">{{ 'distributors.SINGLE-TITLE' | transloco }}:</p>
+        <p class="pl-1.5 text-emerald-300">{{ authorizatedChannel.distributor.name }}</p>
+      </content>
+      <section actions class="flex justify-between">
+        <button
+          (click)="openModal(authorizatedChannel)"
+          mat-flat-button
+          color="primary"
+          class="flex flex-row mt-1">
+          <span class="mb-0">
+            {{ 'form.EDIT' | transloco }}
+          </span>
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          (click)="delete(authorizatedChannel.id)"
+          mat-flat-button
+          color="warn"
+          class="flex flex-row mt-1">
+          <span class="mb-0">
+            {{ 'form.DELETE' | transloco }}
+          </span>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </section>
+    </app-card>
+  </article>
+</section>

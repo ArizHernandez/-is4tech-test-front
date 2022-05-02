@@ -34,12 +34,26 @@
   },
   "routes": {
     "HOME": "Home",
-    "DISTRIBUTORS": "Distribuidores"
+    "DISTRIBUTORS": "Distribuidores",
+    "PRODUCTS": "Productos",
+    "AUTHORIZATEDCHANNELS": "Canales autorizados"
   },
   "distributors": {
     "TITLE": "Distribuidores",
     "SINGLE-TITLE": "Distribuidor",
     "EMAIL-NOTIFICATE": "Email de notificación",
     "EMAIL-ALERT": "Email de alerta"
+  },
+  "products": {
+    "TITLE": "Productos",
+    "SINGLE-TITLE": "Producto",
+    "AMOUNT": "Monto",
+    "DISTRIBUTOR": "Distribuidor",
+    "DESCRIPTION": "Descripción"
+  },
+  "authorizated-channels": {
+    "TITLE": "Canales autorizados",
+    "SINGLE-TITLE": "Canal autorizado",
+    "DISTRIBUTOR": "Distribuidor"
   }
 }

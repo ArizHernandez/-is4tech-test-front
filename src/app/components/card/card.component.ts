@@ -8,5 +8,9 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() title: string = '';
 
+  @Input() translateTitle: boolean = true;
+
   @Input() subtitle: string = '';
+
+  @Input() translateSubtitle: boolean = true;
 }

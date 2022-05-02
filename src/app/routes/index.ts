@@ -11,4 +11,14 @@ export const routes: RoutesNav[] = [
     keyword: 'DISTRIBUTORS',
     icon: 'store',
   },
+  {
+    path: '/products',
+    keyword: 'PRODUCTS',
+    icon: 'inventory_2',
+  },
+  {
+    path: '/authorizated-channels',
+    keyword: 'AUTHORIZATEDCHANNELS',
+    icon: 'add_road',
+  },
 ];
