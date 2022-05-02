@@ -2,8 +2,22 @@
   {{ 'WELCOME-BACK' | transloco }}
 </h2>
 
-<div>
+<section>
   <img
     src="assets/images/home-backgroud.jpg"
     class="w-full h-96 object-cover object-center rounded" />
-</div>
+</section>
+
+<section class="mt-5">
+  <article class="grid grid-cols-3">
+    <a
+      *ngFor="let route of routesNav"
+      [routerLink]="route.path"
+      class="w-full text-white flex rounded flex-col bg-slate-800 justify-center items-center py-4 transition-all duration-200 ease-in-out hover:-skew-y-1 hover:scale-105 hover:bg-teal-800">
+      <span class="text-2xl">
+        {{ 'routes.' + route.keyword | transloco }}
+      </span>
+      <mat-icon>{{ route.icon }}</mat-icon>
+    </a>
+  </article>
+</section>
