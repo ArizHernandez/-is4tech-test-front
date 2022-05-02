@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { routes } from '../../utilities/routes';
+import { routes } from '../../routes';
 
 @Component({
   selector: 'app-aside',

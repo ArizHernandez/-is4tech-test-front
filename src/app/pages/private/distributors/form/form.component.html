@@ -1,0 +1,33 @@
+<h2>
+  {{ (data ? 'form.EDIT' : 'form.CREATE') | transloco }}
+  {{ 'distributors.SINGLE-TITLE' | transloco }}
+</h2>
+
+<form [formGroup]="myForm">
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>{{ 'NAME' | transloco }}</mat-label>
+    <input matInput formControlName="name" type="text" [placeholder]="'EXAMPLE' | transloco" />
+  </mat-form-field>
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>{{ 'CODE' | transloco }}</mat-label>
+    <input matInput formControlName="code" type="text" placeholder="r5a8a-15" />
+  </mat-form-field>
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>{{ 'distributors.EMAIL-NOTIFICATE' | transloco }}</mat-label>
+    <input matInput formControlName="email_notificate" type="email" placeholder="a@gmail.com" />
+  </mat-form-field>
+
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>{{ 'distributors.EMAIL-ALERT' | transloco }}</mat-label>
+    <input matInput formControlName="email_alert" type="email" placeholder="b@gmail.com" />
+  </mat-form-field>
+
+  <button mat-flat-button (click)="onSubmit()" class="mr-2" color="primary" type="submit">
+    {{ 'form.SAVE' | transloco }}
+  </button>
+  <button mat-flat-button (click)="onCancel()" color="warn" type="submit">
+    {{ 'form.CANCEL' | transloco }}
+  </button>
+</form>

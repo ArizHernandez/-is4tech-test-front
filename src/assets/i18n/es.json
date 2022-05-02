@@ -7,6 +7,18 @@
   "EXAMPLE": "Ejemplo",
   "USER-CREATED": "Usuario creado exitosamente 🎉",
   "NOT-USER-VALID": "Usuario no valido 🚫",
+  "NAME": "Nombre",
+  "CODE": "Código",
+  "DELETED-SUCCESS": "Borrado exitosamente!!",
+  "PUT-SUCCESS": "Editado exitosamente!!",
+  "form": {
+    "ADD-NEW": "Crear un nuevo registro",
+    "EDIT": "Editar",
+    "DELETE": "Eliminar",
+    "SAVE": "Guardar",
+    "CANCEL": "Cancelar",
+    "CREATE": "Crear"
+  },
   "auth": {
     "LOGIN": "Iniciar sesión",
     "SIGNUP": "Registrarse",
@@ -21,6 +33,13 @@
     "BOTH-PASSWORDS-MUST-MATCH": "Ambas contraseñas deben coincidir"
   },
   "routes": {
-    "HOME": "Home"
+    "HOME": "Home",
+    "DISTRIBUTORS": "Distribuidores"
+  },
+  "distributors": {
+    "TITLE": "Distribuidores",
+    "SINGLE-TITLE": "Distribuidor",
+    "EMAIL-NOTIFICATE": "Email de notificación",
+    "EMAIL-ALERT": "Email de alerta"
   }
 }

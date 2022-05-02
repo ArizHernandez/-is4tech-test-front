@@ -5,10 +5,11 @@
         <mat-icon>close</mat-icon>
       </button>
     </div>
-    <ul>
+
+    <ul class="md:px-5">
       <li *ngFor="let route of routesNav">
         <a [routerLink]="route.path" routerLinkActive="text-teal-600">
-          <span>{{ "routes." + route.keyword | transloco }}</span>
+          <span>{{ 'routes.' + route.keyword | transloco }}</span>
         </a>
       </li>
     </ul>

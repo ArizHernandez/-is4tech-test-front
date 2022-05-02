@@ -1,0 +1,15 @@
+<mat-card class="p-0 text-white bg-slate-700">
+  <mat-card-content>
+    <mat-card-title class="pt-5 px-5 leading-tight">{{ title | titlecase }}</mat-card-title>
+    <small>
+      <mat-card-subtitle class="px-5 mb-1 text-gray-400">{{ subtitle | uppercase }}</mat-card-subtitle>
+    </small>
+    <hr />
+    <div class="px-5 mt-3">
+      <ng-content select="content"></ng-content>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="p-2 px-4">
+    <ng-content [select]="actions"></ng-content>
+  </mat-card-actions>
+</mat-card>

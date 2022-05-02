@@ -2,7 +2,11 @@ import { RoutesNav } from '../interfaces/route';
 
 export const routes: RoutesNav[] = [
   {
-    path: '',
+    path: '/home',
     keyword: 'HOME',
+  },
+  {
+    path: '/distributors',
+    keyword: 'DISTRIBUTORS',
   },
 ];

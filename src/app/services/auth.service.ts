@@ -11,7 +11,7 @@ import { NotificationService } from './notification.service';
   providedIn: 'root',
 })
 export class AuthService {
-  baseUrl = `${environment.apiUrl}/auth`;
+  private baseUrl = `${environment.apiUrl}/auth`;
 
   constructor(
     private http: HttpClient,
@@ -47,7 +47,8 @@ export class AuthService {
     });
   }
 
-  fakeLogin() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  fakeLogin(body: AuthBody) {
     this.storage.setToken('test');
     this.router.navigateByUrl('/home');
 
