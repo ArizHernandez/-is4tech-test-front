@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   secretKey: 'is4tech',
-  apiUrl: 'http://45.58.56.30:8080/api',
+  apiUrl: 'http://localhost:8080/api',
 };
 
 /*

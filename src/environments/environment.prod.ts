@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   secretKey: 'is4tech',
-  apiUrl: 'http://localhost:8080/api',
+  apiUrl: 'http://45.58.56.30:8080/api',
 };
