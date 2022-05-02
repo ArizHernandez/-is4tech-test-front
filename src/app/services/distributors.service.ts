@@ -103,15 +103,19 @@ export class DistributorsService {
     ];
   }
 
-  deleteDistributorFake(id: number) {
-    this._distributors = this._distributors.filter(distributor => distributor.id !== id);
-    return null;
+  postDistributorFake(body: DistributorBody) {
+    this._distributors.unshift({ ...body, id: Math.floor(Math.random() * 100) });
   }
 
   putDistributorFake(body: DistributorBody, id: number) {
     const editedDistributor = this._distributors.findIndex(distributor => distributor.id === id);
 
     this._distributors[editedDistributor] = { ...body, id };
+    return null;
+  }
+
+  deleteDistributorFake(id: number) {
+    this._distributors = this._distributors.filter(distributor => distributor.id !== id);
     return null;
   }
 
