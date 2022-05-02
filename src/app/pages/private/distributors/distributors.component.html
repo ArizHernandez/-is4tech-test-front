@@ -9,10 +9,10 @@
       [subtitle]="distributor.code">
       <content>
         <p class="mb-0.5">{{ 'distributors.EMAIL-NOTIFICATE' | transloco }}:</p>
-        <p class="mb-3 pl-1.5 text-emerald-300">correo@correo.com</p>
+        <p class="mb-3 pl-1.5 text-emerald-300">{{ distributor.email_notificate }}</p>
 
         <p class="mb-0.5">{{ 'distributors.EMAIL-ALERT' | transloco }}:</p>
-        <p class="mb-3 pl-1.5 text-emerald-300">alert@alert.com</p>
+        <p class="mb-3 pl-1.5 text-emerald-300">{{ distributor.email_alert }}</p>
       </content>
       <section actions class="flex justify-between">
         <button
